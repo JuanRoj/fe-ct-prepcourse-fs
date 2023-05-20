@@ -10,11 +10,11 @@ function crearGato(nombre, edad) {
    var obj = {
       nombre: nombre,
       edad: edad,
-      meow: function() {
-        return 'Meow!';
+      meow: function () {
+         return 'Meow!';
       }
-    };
-    return obj;
+   };
+   return obj;
 }
 
 function nuevoUsuario(nombre, email, password) {
@@ -23,9 +23,9 @@ function nuevoUsuario(nombre, email, password) {
    // Retornar el objeto.
    // Tu código:
    var obj = {
-      nombre:nombre,
-      email:email,
-      password:password,
+      nombre: nombre,
+      email: email,
+      password: password,
    }
    return obj
 }
@@ -45,16 +45,16 @@ function invocarMetodo(objeto, metodo) {
    // Esta propiedad contiene una función en su interior. Debes invocarla/ejecutarla.
    // [NOTA]: no necesitar retornar nada.
    // Tu código:
-      objeto[metodo](); 
+   objeto[metodo]();
 }
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
    // El parámetro "objetoMisterioso" posee una propiedad con el nombre "numeroMisterioso".
    // Debes multiplicar este número por 5 y retornar el resultado.
    // Tu código:
-        const resultado = objetoMisterioso.numeroMisterioso * 5;
-        return resultado;
-    }
+   const resultado = objetoMisterioso.numeroMisterioso * 5;
+   return resultado;
+}
 
 function eliminarPropiedad(objeto, propiedad) {
    // El parámetro "propiedad" es una propiedad del objeto que recibes.
@@ -68,7 +68,7 @@ function tieneEmail(objetoUsuario) {
    // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-   if (objetoUsuario.email){
+   if (objetoUsuario.email) {
       return true;
    } else {
       return false;
@@ -86,8 +86,8 @@ function verificarPassword(objetoUsuario, password) {
    // Verifica si la propiedad "password" del "objetoUsuario" coincide con el parámetro "password".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-      return objetoUsuario['password'] === password;
-   }
+   return objetoUsuario['password'] === password;
+}
 function actualizarPassword(objetoUsuario, nuevaPassword) {
    // Reemplaza la contrseña guardada en la propiedad "password" del "objetoUsuario".
    // La nueva contraseña la recibes por parámetro.
@@ -114,9 +114,9 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
    // Tu código:
    for (let i = 0; i < objetoMuchosUsuarios.length; i++) {
       objetoMuchosUsuarios[i].esPremium = true;
-    }
-    return objetoMuchosUsuarios;
-  }
+   }
+   return objetoMuchosUsuarios;
+}
 
 function sumarLikesDeUsuario(objetoUsuario) {
    // El parámetro "objetoUsuario" tiene una propiedad llamada "posts" que es un arreglo.
@@ -125,10 +125,10 @@ function sumarLikesDeUsuario(objetoUsuario) {
    // Debes sumar los likes de todos los post y retornar el resultado.
    // Tu código:
    var suma = 0;
-   for(var i = 0; i < objetoUsuario.posts.length; i++) {
-     suma = suma + objetoUsuario.posts[i].likes;
+   for (var i = 0; i < objetoUsuario.posts.length; i++) {
+      suma = suma + objetoUsuario.posts[i].likes;
    }
-    return suma;
+   return suma;
 
 }
 
@@ -143,10 +143,10 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // PorcentajeDeDescuento ---> 0.2
    // Precio final ---> 8
    // Tu código:
-objetoProducto.calcularPrecioDescuento = function(){
-   return this.precio - (this.precio * this.porcentajeDeDescuento );
-};
-return objetoProducto;
+   objetoProducto.calcularPrecioDescuento = function () {
+      return this.precio - (this.precio * this.porcentajeDeDescuento);
+   };
+   return objetoProducto;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
